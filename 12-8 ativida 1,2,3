@@ -1,0 +1,61 @@
+<?php
+class Veiculo {
+    public $modelo;
+    public $cor;
+    public $ano;
+
+    public function andar() {
+        echo "Andou";
+    }
+
+    public function parar() {
+        echo "Parou";
+    }
+}class Carro extends Veiculo {
+    public function ligarLimpador() {
+        echo "Limpador ligado";
+    }
+    public function mostrarcombustivel(){
+        echo " o tipo de combústivel do carro é gasolina"
+    }
+}
+
+class Moto extends Veiculo {
+    public function darGrau() {
+        echo "Deu grau!";
+    }
+public function andar(){
+    echo"moto esta em movimento"
+}
+}
+class caminhao extends Veiculo {
+    public function carregar_carga() {
+        echo "Carga carregada com sucesso!";
+    }}
+
+// Exemplo de uso
+$carro = new Carro();
+$carro->modelo = "Gol";
+$carro->cor = "Vermelho";
+$carro->ano = 2018;
+$carro->andar();
+echo "<br>";
+$carro->ligarLimpador();
+$carro->mostrarcombustivel = "gasolina";
+
+echo "<hr>";
+
+$moto = new Moto();
+$moto->modelo = "Honda Biz";
+$moto->cor = "Azul";
+$moto->ano = 2017;
+$moto->parar();
+echo "<br>";
+$moto->darGrau();
+$moto->andar();
+
+$caminhao= new caminhao();
+$caminhao ->modelo= "sei lá";
+$caminhao -> cor = "rosa";
+$caminhao -> ano - "2019";
+$caminhao ->carregar_carga();
